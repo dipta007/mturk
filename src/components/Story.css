@@ -14,3 +14,11 @@
     margin: 5px;
     font-size: large;
 }
+
+.story-flex-container .image-no {
+    text-align: center;
+    margin: 5px;
+    font-size: large;
+    font-weight: 700;
+    color: #999;
+}
