@@ -1,0 +1,16 @@
+.story-flex-container {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.story-flex-container img {
+    height: auto;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.story-flex-container .caption {
+    text-align: center;
+    margin: 5px;
+    font-size: large;
+}
