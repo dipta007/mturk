@@ -1,16 +1,15 @@
 import React from "react";
 import "./Output.css";
 
-const Step1 = () => {
+const Step1 = ({ step1, handleStep1Change }) => {
   return (
     <div className="box">
       <p className="title">Step 1: Necessary Condition for Goal Completion</p>
       <p>
-        In your own words, find out an condition related to the{" "}
-        <span className="entity">entity</span> that is necessary for successful{" "}
+        Write a condition that is necessary for successful{" "}
         <span className="goal">goal</span> completion
       </p>
-      <textarea />
+      <textarea cols={80} value={step1} onChange={handleStep1Change} />
     </div>
   );
 };

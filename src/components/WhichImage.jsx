@@ -1,60 +1,71 @@
 import React, { useState } from "react";
 
 const WhichImage = () => {
-  const [selectedOption, setSelectedOption] = useState("");
+  const [images, setImages] = useState({
+    image1: false,
+    image2: false,
+    image3: false,
+    image4: false,
+    image5: false,
+  });
 
-  const handleOptionChange = (event) => {
-    setSelectedOption(event.target.value);
+  const handleImageChange = (event) => {
+    const { name, checked } = event.target;
+    console.log(name, checked);
+    setImages((prevState) => ({
+      ...prevState,
+      [name]: checked,
+    }));
   };
 
   return (
     <div>
       <label>
         <input
-          type="radio"
-          value="image1"
-          checked={selectedOption === "image1"}
-          onChange={handleOptionChange}
+          type="checkbox"
+          name="image1"
+          checked={images.image1}
+          onChange={handleImageChange}
         />
         Image 1
       </label>
       <br />
       <label>
         <input
-          type="radio"
-          value="image2"
-          checked={selectedOption === "image2"}
-          onChange={handleOptionChange}
+          type="checkbox"
+          name="image2"
+          checked={images.image2}
+          onChange={handleImageChange}
         />
         Image 2
       </label>
       <br />
       <label>
         <input
-          type="radio"
-          value="image3"
-          checked={selectedOption === "image3"}
-          onChange={handleOptionChange}
+          type="checkbox"
+          name="image3"
+          checked={images.image3}
+          onChange={handleImageChange}
         />
         Image 3
       </label>
       <br />
       <label>
         <input
-          type="radio"
-          value="image4"
-          checked={selectedOption === "image4"}
-          onChange={handleOptionChange}
+          type="checkbox"
+          name="image4"
+          checked={images.image4}
+          onChange={handleImageChange}
         />
         Image 4
       </label>
       <br />
       <label>
         <input
-          type="radio"
-          value="image5"
-          checked={selectedOption === "image5"}
-          onChange={handleOptionChange}
+          type="checkbox"
+          name="image5"
+          checked={images.image5}
+          onChange={handleImageChange}
         />
         Image 5
       </label>

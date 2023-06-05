@@ -5,7 +5,9 @@ const Rate = () => {
     <div className="box">
       <p className="title">Final: Rate the Task</p>
 
-      <p>How difficult was it to understand the story, and answer the questions?</p>
+      <p>
+        How difficult was it to understand the story, and answer the questions?
+      </p>
 
       <div class="rating-container">
         <div style={{ marginBottom: "4px" }}>

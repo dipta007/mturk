@@ -6,8 +6,15 @@ const Story = () => {
   return (
     <div className="Story">
       <p>
-        There is a story given below with its images. Every image has it's own
-        caption.
+        In the following HIT, you will be presented with the high-level
+        description of a <span className="goal">goal</span>; a collection of
+        images that are, in some manner, related to that goal; and captions
+        describing each image. You will identify what could prevent that goal
+        from being completed successfully. To aid this task, you will be given a
+        specific <span className="entity">entity</span> (generally, person or
+        object) related to that goal, and be asked to identify how either
+        specific characteristics of that entity, or events that the entity may
+        be involved in, could lead to the goal not being completed.
       </p>
 
       <div className="story-flex-container">

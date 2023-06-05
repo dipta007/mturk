@@ -39,10 +39,17 @@
 
 .entity {
   color: blue;
+  font-weight: 700;
 }
 
 .goal {
   color: orange;
+  font-weight: 700;
+}
+
+.causal {
+  color: green; 
+  font-weight: 700;
 }
 
 .bold {
