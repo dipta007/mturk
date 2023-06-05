@@ -1,7 +1,7 @@
 import React from "react";
 import "./Output.css";
 
-const Step4 = ({ chosen, step2, step4, handleStep4Change }) => {
+const Step4 = ({ chosen, step3, step4, handleStep4Change }) => {
   return (
     <div className="box">
       <p className="title">
@@ -11,7 +11,7 @@ const Step4 = ({ chosen, step2, step4, handleStep4Change }) => {
       {chosen === "attribute" && (
         <p>
           What event is likely to result in the{" "}
-          <span className="causal">causal connection</span>, ({step2}) , being
+          <span className="causal">causal connection</span>, ({step3}) , being
           true?
         </p>
       )}
@@ -19,7 +19,7 @@ const Step4 = ({ chosen, step2, step4, handleStep4Change }) => {
       {chosen === "event" && (
         <p>
           What is likely to result in the{" "}
-          <span className="causal">causal connection</span>, ({step2}) ,
+          <span className="causal">causal connection</span>, ({step3}) ,
           occurring?
         </p>
       )}

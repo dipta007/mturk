@@ -49,7 +49,7 @@ const Output = () => {
         <>
           <Step4
             chosen={selected}
-            step2={step2}
+            step3={step3}
             step4={step4}
             handleStep4Change={handleStep4Change}
           />
