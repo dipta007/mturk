@@ -4,8 +4,9 @@ const Header = () => {
   return (
     <div className="header">
       <h1 style={{ textAlign: "center" }}>
-				Understanding how changing an attribute of an agent affects the visual story
-			</h1>
+        Understanding how changing an attribute of an agent affects the visual
+        story
+      </h1>
       <p>
         By performing this HIT, you agree that{" "}
         <span style={{ color: "red" }}>
@@ -16,7 +17,7 @@ const Header = () => {
         <a
           href="https://agentpatientexamples.s3.us-east-2.amazonaws.com/WebConsentForm.pdf"
           target="_blank"
-					rel="noreferrer"
+          rel="noreferrer"
         >
           consent form
         </a>

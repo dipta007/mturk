@@ -1,8 +1,10 @@
 import React from "react";
-import data from "../input.json";
+import allData from "../input.json";
 import "./Story.css";
 
 const Story = () => {
+  const random = Math.floor(Math.random() * allData.length);
+  const data = allData[random];
   return (
     <div className="Story">
       <p>
