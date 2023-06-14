@@ -18,15 +18,15 @@ function App() {
           checked={tab === '0'}
           onChange={handleTabChange}
         />
-        <label htmlFor="task">Option 1</label>
-
+        <label htmlFor="task">Option 1 (Identify Entity)</label>
+        
         <input
           type="radio"
           value="1"
           checked={tab === '1'}
           onChange={handleTabChange}
         />
-        <label htmlFor="task">Option 2</label>
+        <label htmlFor="task">Option 2 (Physical Attribute of Entity)</label>
       </div>
 
       {tab === '0' && (

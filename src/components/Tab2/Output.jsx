@@ -38,14 +38,22 @@ const Output = () => {
       <div style={{ height: "20px" }}></div>
       <Step2 step2={step2} handleStep2Change={handleStep2Change} />
       <div style={{ height: "20px" }}></div>
-      <Step3
+      {/* <Step3
         selected={selected}
         handleCheckboxChange={handleCheckboxChange}
         step3={step3}
         handleStep3Change={handleStep3Change}
+      /> */}
+      {/* <div style={{ height: "20px" }}></div> */}
+      <Step4
+        chosen={selected}
+        step3={step3}
+        step4={step4}
+        handleStep4Change={handleStep4Change}
       />
       <div style={{ height: "20px" }}></div>
-      {selected && selected.length > 0 && (
+
+      {/* {selected && selected.length > 0 && (
         <>
           <Step4
             chosen={selected}
@@ -55,7 +63,7 @@ const Output = () => {
           />
           <div style={{ height: "20px" }}></div>
         </>
-      )}
+      )} */}
       <Rate />
 
       <p className="bold">Done! Please go ahead and Submit.</p>
