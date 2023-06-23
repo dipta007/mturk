@@ -46,6 +46,7 @@ const Output = () => {
       <Step2 step2={step2} handleStep2Change={handleStep2Change} />
       <div style={{ height: "20px" }}></div>
       <Step3
+        step2={step2}
         selected={selected}
         handleCheckboxChange={handleCheckboxChange}
         step3={step3}
@@ -55,6 +56,7 @@ const Output = () => {
       {selected && selected.length > 0 && (
         <>
           <Step4
+            step2={step2}
             chosen={selected}
             step3={step3}
             step4={step4}

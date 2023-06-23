@@ -3,6 +3,7 @@ import "./Output.css";
 import WhichImage from "./WhichImage";
 
 const Step3 = ({
+  step2,
   selected,
   handleCheckboxChange,
   step3,
@@ -15,13 +16,19 @@ const Step3 = ({
         perturbed condition.
       </p>
       <p>
-        Describe how the entity can lead to the perturbed condition. Call this
+        What can be changed about the <span className="entity">entity</span> that 
+        will lead to the perturbed condition? Call this{" "}
+        {/* Describe how the entity can lead to the perturbed condition. Call this */}
         the <span className="causal">causal connection</span>.
       </p>
+      <p>This can or might contradict the images.</p>
       <textarea cols={80} value={step3} onChange={handleStep3Change} />
+      {step2 && step3 && (
+        <h2 style={{ textAlign: "center" }}>{step3} &rarr; {step2}</h2>
+      )}
       <p>
-        Is this <span className="causal">causal connection</span> describing
-        attribute of something or an event?
+        Is this <span className="causal">causal connection</span> changing
+        attribute of <span className="entity">entity</span> (beer expired) or describing an event (bike broke down)?
       </p>
       <div>
         <input
@@ -31,11 +38,13 @@ const Step3 = ({
           onChange={handleCheckboxChange}
         />
         <label htmlFor="yesCheckbox">
-          Attribute: The condition in step 2 describes some characteristic or
-          attribute of someone / something.
+          Attribute
+          {/* Attribute: The condition in step 3 describes some characteristic or
+          attribute of someone / something. */}
         </label>
-        <br></br>
-        <br></br>
+        {"         "}
+        {/* <br></br>
+        <br></br> */}
         <input
           type="radio"
           value="event"
@@ -43,12 +52,13 @@ const Step3 = ({
           onChange={handleCheckboxChange}
         />
         <label htmlFor="noCheckbox">
-          Event: The condition in step 2 describes something someone/something
-          does or experiences.
+          Event
+          {/* Event: The condition in step 2 describes something someone/something
+          does or experiences. */}
         </label>
       </div>
 
-      {selected === "attribute" && (
+      {/* {selected === "attribute" && (
         <div>
           <p>What image(s) would be most affected by this causal connection?</p>
           <WhichImage />
@@ -60,7 +70,7 @@ const Step3 = ({
           <p>What image(s) would be most affected by this causal connection?</p>
           <WhichImage />
         </div>
-      )}
+      )} */}
     </div>
   );
 };
