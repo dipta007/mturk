@@ -5,14 +5,12 @@ import "./Story.css";
 
 const Story = () => {
   const random = Math.floor(Math.random() * allData.length);
-  console.log(random, allData)
   const data = allData[random];
   // let img1 = `file:///Users/dipta007/Library/CloudStorage/GoogleDrive-sroydip1@umbc.edu/My%20Drive/RA/multimodal/mturk/src/images/${data["Item ID#"]}_1.jpg`
   const img1 = `${process.env.PUBLIC_URL}/images/${data["Item ID#"]}_1.jpg`
   const img2 = `${process.env.PUBLIC_URL}/images/${data["Item ID#"]}_2.jpg`
   const img3 = `${process.env.PUBLIC_URL}/images/${data["Item ID#"]}_3.jpg`
   const story = data["Image1&2 - Narrative Facet"] + " " + data["Image1&2&3 - Narrative Facet"]
-  console.log(story)
   return (
     <div className="Story">
       <p>
