@@ -1,0 +1,43 @@
+.story-flex-container {
+    /* display: flex;
+    flex-wrap: nowrap; */
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust the width as per your requirement */
+    grid-gap: 10px; /* Adjust the gap between images as per your requirement */
+}
+
+.story-flex-container img {
+    /* height: 200px;
+    max-width: 100%;
+    flex: 1;
+    object-fit: cover; */
+
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.story-flex-container .caption {
+    text-align: center;
+    margin: 5px;
+    font-size: large;
+    color: olive;
+    font-weight: 500;
+}
+
+.story-flex-container .caption-sis {
+    text-align: center;
+    margin: 5px;
+    font-size: large;
+    color: #ff4500;
+    font-weight: 500;
+}
+
+.story-flex-container .image-no {
+    text-align: center;
+    margin: 5px;
+    font-size: large;
+    font-weight: 700;
+    color: #999;
+}
