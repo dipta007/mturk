@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/mturk/static/css/main.9fd8b39f.css",
-    "main.js": "/mturk/static/js/main.c9abd6cc.js",
+    "main.js": "/mturk/static/js/main.93048b15.js",
     "static/js/787.b82daea0.chunk.js": "/mturk/static/js/787.b82daea0.chunk.js",
     "index.html": "/mturk/index.html",
     "main.9fd8b39f.css.map": "/mturk/static/css/main.9fd8b39f.css.map",
-    "main.c9abd6cc.js.map": "/mturk/static/js/main.c9abd6cc.js.map",
+    "main.93048b15.js.map": "/mturk/static/js/main.93048b15.js.map",
     "787.b82daea0.chunk.js.map": "/mturk/static/js/787.b82daea0.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9fd8b39f.css",
-    "static/js/main.c9abd6cc.js"
+    "static/js/main.93048b15.js"
   ]
 }
