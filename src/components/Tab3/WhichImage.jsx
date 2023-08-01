@@ -49,7 +49,7 @@ const WhichImage = () => {
         />
         Image 3
       </label>
-      <br />
+      {/* <br />
       <label>
         <input
           type="checkbox"
@@ -68,7 +68,7 @@ const WhichImage = () => {
           onChange={handleImageChange}
         />
         Image 5
-      </label>
+      </label> */}
     </div>
   );
 };
