@@ -8,34 +8,33 @@ const Step3 = ({
   handleCheckboxChange,
   step3,
   handleStep3Change,
+  data,
 }) => {
   return (
     <div className="box">
-      <p className="title">
-        Step 3: Write Alternate Stroy
-      </p>
-      <p>
-        Write the alternate story with minimal changes to the original one.
-      </p>
+      <p className="title">Step 3: Write Alternate Stroy</p>
+      <p>Write the alternate story with minimal changes to the original one.</p>
       <p>This can or might contradict the images.</p>
-      <textarea cols={80} rows={16} value={step3} onChange={handleStep3Change} />
-      {/* {step2 && step3 && (
-        <h2 style={{ textAlign: "center" }}>{step3} &rarr; {step2}</h2>
-      )} */}
-
-      {/* {selected === "attribute" && (
-        <div>
-          <p>What image(s) would be most affected by this causal connection?</p>
-          <WhichImage />
-        </div>
-      )}
-
-      {selected === "event" && (
-        <div>
-          <p>What image(s) would be most affected by this causal connection?</p>
-          <WhichImage />
-        </div>
-      )} */}
+      {step3 &&
+        step3.map((line, index) => (
+          <div
+            style={{
+              marginBottom: "20px",
+              display: "flex",
+              alignItems: "center",
+            }}
+          >
+            <p style={{ marginRight: "10px" }}>Line {index + 1}</p>{" "}
+            <textarea
+              cols={100}
+              rows={2}
+              value={line}
+              onChange={handleStep3Change}
+              name={index}
+            />
+            <div style={{ height: "20px" }}></div>
+          </div>
+        ))}
     </div>
   );
 };

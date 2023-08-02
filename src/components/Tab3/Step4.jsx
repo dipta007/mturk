@@ -1,41 +1,35 @@
 import React from "react";
 import "./Output.css";
+import "./Step4.css"
 
-const Step4 = ({ chosen, step2, step3, step4, handleStep4Change }) => {
+const Step4 = ({ step0, step1, step2, step3, lines }) => {
+  const storyHtml = step3.map((line, index) => (
+      <span
+        style={{
+          color: line === lines[index] ? "green" : "red",
+        }}
+      >
+        {line}.{" "}
+      </span>
+    ))
+
+  
+
   return (
-    <div className="box">
-      <p className="title">
-        Step 4: Infer what enables the{" "}
-        <span className="casual">causal connection</span>
-      </p>
-      {chosen === "attribute" && (
-        <p>
-          What event is likely to result in the{" "}
-          <span className="causal">causal connection</span>, ({step3}) ,
-          occurring?
-          <br></br>
-          <br></br>
-          This event can be something that someone/something does in the past.
-        </p>
-      )}
-
-      {chosen === "event" && (
-        <p>
-          What event is likely to result in the{" "}
-          <span className="causal">causal connection</span>, ({step3}) ,
-          occurring?
-          <br></br>
-          <br></br>
-          This event can be something that someone/something does in the past.
-        </p>
-      )}
-      <textarea cols={80} value={step4} onChange={handleStep4Change} />
-
-      {step2 && step3 && step4 && (
-        <h2 style={{ textAlign: "center" }}>
-          {step4} &rarr; {step3} &rarr; {step2}
-        </h2>
-      )}
+    <div className="boxs">
+        
+      <table style={{ width: "100%"}}>
+        <tr>
+          <th style={{ width: "60%"}}>Story</th>
+          <th>Leads To</th>
+          <th>Blocks</th>
+        </tr>
+        <tr>
+          <td>{storyHtml}</td>
+          <td>{step2}</td>
+          <td>{step0}</td>
+        </tr>
+      </table>
     </div>
   );
 };

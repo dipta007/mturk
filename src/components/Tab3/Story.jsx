@@ -1,11 +1,8 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React from "react";
-import allData from "../../data_story_0.8.json";
 import "./Story.css";
 
-const Story = () => {
-  const random = Math.floor(Math.random() * allData.length);
-  const data = allData[random];
+const Story = ({ data }) => {
   // let img1 = `file:///Users/dipta007/Library/CloudStorage/GoogleDrive-sroydip1@umbc.edu/My%20Drive/RA/multimodal/mturk/src/images/${data["Item ID#"]}_1.jpg`
   const img1 = `${process.env.PUBLIC_URL}/images/${data["Item ID#"]}_1.jpg`
   const img2 = `${process.env.PUBLIC_URL}/images/${data["Item ID#"]}_2.jpg`

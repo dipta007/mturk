@@ -6,17 +6,44 @@ import Step3 from "./Step3";
 import Step4 from "./Step4";
 import Rate from "../Rate";
 
-const Output = () => {
+const Output = ({ data }) => {
   const [selected, setSelected] = useState("");
 
   const handleCheckboxChange = (event) => {
     setSelected(event.target.value);
   };
 
+  const getSplittedStory = (data) => {
+    const story =
+      data["Image1&2 - Narrative Facet"] +
+      " " +
+      data["Image1&2&3 - Narrative Facet"];
+    let lines = story.split(". ");
+    lines = lines.map((line) => line.trim());
+    return lines;
+  }
+
+  const lines = getSplittedStory(data);
+
+  const isChanged = (data, step3) => {
+    const lines = getSplittedStory(data);
+
+    
+    let original = lines.join(" ");
+    original = original.replaceAll(/\s/g,'')
+    original = original.toLowerCase();
+
+    let changed = step3.join(" ")
+    changed = changed.replaceAll(/\s/g,'')
+    changed = changed.toLowerCase();
+
+    return original !== changed;
+  }
+
   const [step0, setStep0] = useState("");
   const [step1, setStep1] = useState("");
   const [step2, setStep2] = useState("");
-  const [step3, setStep3] = useState("");
+  const [step3, setStep3] = useState(lines);
   const [step4, setStep4] = useState("");
 
   const handleStep0Change = (event) => {
@@ -29,13 +56,14 @@ const Output = () => {
     setStep2(event.target.value);
   };
   const handleStep3Change = (event) => {
-    setStep3(event.target.value);
-  };
-  const handleStep4Change = (event) => {
-    setStep4(event.target.value);
+    console.log(event.target.name, event.target.value);
+    const index = event.target.name;
+    const newStep3 = [...step3];
+    newStep3[index] = event.target.value;
+    setStep3(newStep3);
   };
 
-  console.log(step1, step2, step3, step4);
+  const storyChanged = isChanged(data, step3);
 
   return (
     <div className="Output">
@@ -51,16 +79,17 @@ const Output = () => {
         handleCheckboxChange={handleCheckboxChange}
         step3={step3}
         handleStep3Change={handleStep3Change}
+        data={data}
       />
       <div style={{ height: "20px" }}></div>
-      {selected && selected.length > 0 && (
+      {step0 && step1 && step2 && storyChanged && (
         <>
           <Step4
+            step0={step0}
+            step1={step1}
             step2={step2}
-            chosen={selected}
             step3={step3}
-            step4={step4}
-            handleStep4Change={handleStep4Change}
+            lines={lines}
           />
           <div style={{ height: "20px" }}></div>
         </>
