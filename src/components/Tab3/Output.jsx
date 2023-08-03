@@ -1,9 +1,11 @@
+/* eslint-disable react/jsx-pascal-case */
 import React, { useState } from "react";
 import Step0 from "./Step0";
 import Step1 from "./Step1";
 import Step2 from "./Step2";
 import Step3 from "./Step3";
 import Step4 from "./Step4";
+import Step2_1 from "./Step2.1";
 import Rate from "../Rate";
 
 const Output = ({ data }) => {
@@ -43,6 +45,7 @@ const Output = ({ data }) => {
   const [step0, setStep0] = useState("");
   const [step1, setStep1] = useState("");
   const [step2, setStep2] = useState("");
+  const [step2_1, setStep2_1] = useState("");
   const [step3, setStep3] = useState(lines);
   const [step4, setStep4] = useState("");
 
@@ -55,6 +58,9 @@ const Output = ({ data }) => {
   const handleStep2Change = (event) => {
     setStep2(event.target.value);
   };
+  const handleStep2_1Change = (event) => {
+    setStep2_1(event.target.value);
+  };
   const handleStep3Change = (event) => {
     console.log(event.target.name, event.target.value);
     const index = event.target.name;
@@ -64,14 +70,15 @@ const Output = ({ data }) => {
   };
 
   const storyChanged = isChanged(data, step3);
-
   return (
-    <div className="Output">
-      <Step0 step0={step0} handleStep0Change={handleStep0Change} />
+    <div className="output">
+      {/* <Step0 step0={step0} handleStep0Change={handleStep0Change} />
+      <div style={{ height: "20px" }}></div> */}
+      <Step1 step1={step1} handleStep1Change={handleStep1Change} data={data} />
       <div style={{ height: "20px" }}></div>
-      <Step1 step1={step1} handleStep1Change={handleStep1Change} />
+      <Step2 step2={step2} handleStep2Change={handleStep2Change} data={data} />
       <div style={{ height: "20px" }}></div>
-      <Step2 step2={step2} handleStep2Change={handleStep2Change} />
+      <Step2_1 step2_1={step2_1} handleStep2_1Change={handleStep2_1Change} data={data} />
       <div style={{ height: "20px" }}></div>
       <Step3
         step2={step2}

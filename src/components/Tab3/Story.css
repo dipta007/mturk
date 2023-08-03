@@ -41,3 +41,14 @@
     font-weight: 700;
     color: #999;
 }
+
+.story {
+    width: 52%;
+    float: left;
+    position: fixed;
+}
+
+.output {
+    width: 45%;
+    float: right;
+}

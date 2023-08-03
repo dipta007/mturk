@@ -9,19 +9,22 @@ const Story = ({ data }) => {
   const img3 = `${process.env.PUBLIC_URL}/images/${data["Item ID#"]}_3.jpg`
   const story = data["Image1&2 - Narrative Facet"] + " " + data["Image1&2&3 - Narrative Facet"]
   return (
-    <div className="Story">
-      <p>
-        In the following HIT, you will be presented with a collection of
-        images and a story that is, in some manner, related to that goal.
-        You will identify the <span className="goal">goal</span> of the story,
-        and then identify the condition(s) that could prevent that goal and the
-        counterfactual story that would result from that condition. 
-        To aid this task, you will be given a
-        specific <span className="entity">entity</span> (generally, person or
-        object), and be asked to identify the goal and how either
-        specific characteristics of that entity, or events that the entity may
-        be involved in, could lead to the goal not being completed.
-      </p>
+    <div className="story">
+      <div>
+        <h3>Task</h3>
+        <p>
+          In the following HIT, you will be presented with a collection of
+          images and a story that is, in some manner, related to that goal.
+          You will identify the <span className="goal">goal</span> of the story,
+          and then identify the condition(s) that could prevent that goal and the
+          counterfactual story that would result from that condition. 
+          To aid this task, you will be given a
+          specific <span className="entity">entity</span> (generally, person or
+          object), and be asked to identify the goal and how either
+          specific characteristics of that entity, or events that the entity may
+          be involved in, could lead to the goal not being completed.
+        </p>
+      </div>
 
       <div className="story-flex-container">
         <div style={{ padding: "10px" }}>
@@ -49,6 +52,10 @@ const Story = ({ data }) => {
 
       <h4>
         Entity: <span className="entity">{data.entity}</span>
+      </h4>
+
+      <h4>
+        Goal: <span className="goal" style={{ color: "red", backgroundColor: "orange"}}>NEED TO GENERATE</span>
       </h4>
 
       <p style={{

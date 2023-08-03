@@ -20,7 +20,6 @@ const Tab3 = () => {
   return (
     <>
 			<Header />
-      <h3>Task</h3>
       <Story data={data}/>
       <Output data={data}/>
 		</>

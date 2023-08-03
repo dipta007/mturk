@@ -4,13 +4,10 @@ import "./Step4.css"
 
 const Step4 = ({ step0, step1, step2, step3, lines }) => {
   const storyHtml = step3.map((line, index) => (
-      <span
-        style={{
-          color: line === lines[index] ? "green" : "red",
-        }}
-      >
+    line === lines[index] ? <span>{line}.{" "}</span> :
+      <mark>
         {line}.{" "}
-      </span>
+      </mark>
     ))
 
   
@@ -20,9 +17,9 @@ const Step4 = ({ step0, step1, step2, step3, lines }) => {
         
       <table style={{ width: "100%"}}>
         <tr>
-          <th style={{ width: "60%"}}>Story</th>
-          <th>Leads To</th>
-          <th>Blocks</th>
+          <th style={{ width: "60%"}}>Altered Story</th>
+          <th>Leads To...</th>
+          <th>Which Likely Blocks...</th>
         </tr>
         <tr>
           <td>{storyHtml}</td>

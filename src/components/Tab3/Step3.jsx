@@ -12,9 +12,12 @@ const Step3 = ({
 }) => {
   return (
     <div className="box">
-      <p className="title">Step 3: Write Alternate Stroy</p>
-      <p>Write the alternate story with minimal changes to the original one.</p>
-      <p>This can or might contradict the images.</p>
+      <p className="title">Step 4: Update Story</p>
+      <p>
+        What about the story needs to change to reflect the event or property
+        you identified in step 3? Make minimal changes to the story. . This can
+        or might contradict the images.
+      </p>
       {step3 &&
         step3.map((line, index) => (
           <div
@@ -24,7 +27,7 @@ const Step3 = ({
               alignItems: "center",
             }}
           >
-            <p style={{ marginRight: "10px" }}>Line {index + 1}</p>{" "}
+            <p style={{ marginRight: "7px" }}>L.{index + 1}</p>{" "}
             <textarea
               cols={100}
               rows={2}
