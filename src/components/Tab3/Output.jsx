@@ -89,7 +89,7 @@ const Output = ({ data }) => {
         data={data}
       />
       <div style={{ height: "20px" }}></div>
-      {step0 && step1 && step2 && storyChanged && (
+      {step1 && step2 && step2_1 && storyChanged && (
         <>
           <Step4
             step0={step0}

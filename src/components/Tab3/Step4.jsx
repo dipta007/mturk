@@ -24,7 +24,7 @@ const Step4 = ({ step0, step1, step2, step3, lines }) => {
         <tr>
           <td>{storyHtml}</td>
           <td>{step2}</td>
-          <td>{step0}</td>
+          <td><span className="goal" style={{ color: "red", backgroundColor: "orange"}}>NEED TO GENERATE</span></td>
         </tr>
       </table>
     </div>
