@@ -12,7 +12,7 @@ function App() {
 
   return (
     <div className="App">
-      <div>
+      {/* <div>
         <div style={{ marginBottom: "10px" }}>
           <input
             type="radio"
@@ -42,7 +42,7 @@ function App() {
           />
           <label htmlFor="task">Option 3 (Regeneration on ARL)</label>
         </div>
-      </div>
+      </div> */}
 
       {tab === '0' && (
         <Tab1 />
